@@ -1,0 +1,173 @@
+.os-nav-bar {
+  width: 100%;
+  height: 32px;
+  color: #e4e4e7;
+  padding-inline: 0.85rem;
+  background-color: rgba(3, 5, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  user-select: none;
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+  }
+
+  .avail-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.12rem 0.55rem;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.22);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #34d399;
+
+    .pulse-dot {
+      width: 5px;
+      height: 5px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #10b981;
+    }
+  }
+
+  .apple-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+
+    img {
+      height: 15px;
+      width: 15px;
+      filter: invert(1);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .nav-items {
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+
+    p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    &.brand p {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.14);
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    top: 32px;
+    left: 8px;
+    min-width: 190px;
+    background: rgba(28, 28, 30, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 4px;
+    z-index: 10000;
+
+    .dropdown-item {
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: #e4e4e7;
+      transition: background 0.15s ease;
+
+      &.bold {
+        font-weight: 600;
+      }
+
+      &:hover {
+        background-color: #3b82f6;
+        color: #fff;
+      }
+    }
+
+    .dropdown-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 4px 0;
+    }
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 14px;
+      width: 14px;
+      opacity: 0.85;
+      filter: invert(1);
+    }
+  }
+
+  .datetime-display {
+    display: flex;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    cursor: default;
+
+    .date-part {
+      opacity: 0.9;
+    }
+
+    .time-part {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .os-nav-bar {
+    .nav-items:not(.brand) {
+      display: none;
+    }
+  }
+}

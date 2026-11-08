@@ -1,0 +1,10 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #03050b;
+  color: #f4f4f5;
+  overflow: hidden;
+}
+

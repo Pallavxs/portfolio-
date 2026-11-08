@@ -1,0 +1,63 @@
+export const projects = [
+  {
+    id: "codecolosseum",
+    appId: "codecolosseum",
+    name: "CodeColosseum",
+    title: "CodeColosseum - AI Model Battleground",
+    tagline: "Side-by-side LLM coding evaluation arena with automated code scoring.",
+    description: "An interactive benchmarking and evaluation platform that runs prompts across competing LLMs (GPT-4o, Claude 3.5, Gemini 1.5 Pro, DeepSeek), streams responses side-by-side, and dynamically grades code quality, token efficiency, and accuracy to declare a winner.",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "OpenAI API", "Anthropic Claude", "WebSockets", "Tailwind CSS"],
+    github: "https://github.com/pallavshrivastava/codecolosseum",
+    liveDemo: "https://codecolosseum.dev",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
+    category: "AI / LLM",
+    featured: true,
+    hasAppWindow: false
+  },
+  {
+    id: "hermes",
+    appId: "hermes",
+    name: "Hermes AI",
+    title: "Hermes AI - Support & Escalation Engine",
+    tagline: "Autonomous customer support agent with sentiment-based human triage.",
+    description: "An enterprise-ready customer intelligence and support assistant that resolves 70%+ of frequent queries autonomously via RAG knowledge retrieval and seamlessly triages high-friction issues with priority escalation to human operators.",
+    technologies: ["React", "Node.js", "MongoDB", "LangChain", "Vector Embeddings", "Express", "Socket.io"],
+    github: "https://github.com/pallavshrivastava/hermes-ai",
+    liveDemo: "https://hermes-ai.dev",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
+    category: "AI / LLM",
+    featured: true,
+    hasAppWindow: false
+  },
+  {
+    id: "zena",
+    appId: "zena",
+    name: "Zena",
+    title: "Zena - Conversational AI Assistant",
+    tagline: "Context-aware conversational AI with dynamic tool execution and history management.",
+    description: "A fast, privacy-conscious conversational AI interface offering multi-turn dialog memory, markdown code rendering, custom system prompt personalization, and simulated agent reasoning for developer workflows.",
+    technologies: ["React", "TypeScript", "Express", "OpenAI SDK", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/pallavshrivastava/zena-ai",
+    liveDemo: "https://zena-ai.dev",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
+    category: "AI / LLM",
+    featured: true,
+    hasAppWindow: false
+  },
+  {
+    id: "ai-review-system",
+    appId: null,
+    name: "AI Review System",
+    title: "AI Review System - Automated Code & PR Reviewer",
+    tagline: "Automated static analysis and LLM-powered GitHub PR review bot.",
+    description: "Analyzes pull requests in GitHub repositories, detects security vulnerabilities, style antipatterns, and missing edge cases, and posts structured markdown review comments directly into pull request threads.",
+    technologies: ["Node.js", "Express", "GitHub Octokit API", "OpenAI API", "Docker", "PostgreSQL"],
+    github: "https://github.com/pallavshrivastava/ai-pr-review-system",
+    liveDemo: "https://aireview.dev",
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=1000",
+    category: "Developer Tools",
+    featured: false,
+    hasAppWindow: false
+  },
+];
+

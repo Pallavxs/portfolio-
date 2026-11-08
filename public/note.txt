@@ -1,0 +1,79 @@
+```ts
+/**
+ * @file profile.config.ts
+ * @author Pallav Shrivastava
+ * @role Full-Stack Developer · MERN
+ * @location India
+ * @email pallavshrivastava84@gmail.com
+ */
+
+// -----------------------------
+// TECH STACK
+// -----------------------------
+
+const TECH_STACK = {
+  frontend: [
+    "React.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Sass / SCSS",
+  ],
+
+  backend: [
+    "Node.js",
+    "Express.js",
+    "WebSockets",
+  ],
+
+  databases: [
+    "MongoDB",
+    "PostgreSQL",
+    "Redis",
+    "Pinecone",
+  ],
+
+  ai: [
+    "OpenAI",
+    "Claude",
+    "RAG",
+    "LangChain",
+  ],
+};
+
+// -----------------------------
+// FEATURED PROJECTS
+// -----------------------------
+
+const PROJECTS = {
+  CodeColosseum: "AI model comparison & coding evaluation",
+  HermesAI: "RAG-powered customer support agent",
+  ZenaAI: "Context-aware AI assistant",
+};
+
+// -----------------------------
+// BACKGROUND
+// -----------------------------
+
+const PROFILE = {
+  education: "B.Tech — Computer Science & Engineering",
+  experience: "Full-Stack Development & AI Integration",
+  status: "Open to Opportunities",
+};
+
+export default {
+  profile: PROFILE,
+  stack: TECH_STACK,
+  projects: PROJECTS,
+};
+```
+
+```bash
+$ whoami
+
+> pallav.shrivastava
+> Full-Stack MERN 
+> Location: India
+> Status: Open to Opportunities
+> System: Pallav OS
+> Ready for commands...
+```

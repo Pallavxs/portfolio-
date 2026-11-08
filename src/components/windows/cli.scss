@@ -1,0 +1,119 @@
+.cli-window {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #121214;
+  color: #f1f5f9;
+  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  padding: 1rem 1.25rem 2rem 1.25rem;
+  box-sizing: border-box;
+  cursor: text;
+
+  .terminal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .terminal-system-banner {
+    color: #38bdf8;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 0.75rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    opacity: 0.95;
+  }
+
+  .terminal-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    min-height: 1.5rem;
+
+    &.command-line {
+      margin-top: 0.5rem;
+    }
+
+    &.active-line {
+      margin-top: 0.5rem;
+      align-items: center;
+    }
+  }
+
+  .prompt-label {
+    color: #4ade80;
+    font-weight: 600;
+    user-select: none;
+    flex-shrink: 0;
+  }
+
+  .command-text {
+    color: #f8fafc;
+    font-weight: 500;
+  }
+
+  .terminal-output {
+    color: #cbd5e1;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: inherit;
+    margin: 0.2rem 0 0.6rem 0;
+    line-height: 1.45;
+  }
+
+  .terminal-input {
+    flex: 1;
+    min-width: 180px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f8fafc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    caret-color: #38bdf8;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cli-window {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+
+    .terminal-system-banner {
+      font-size: 0.75rem;
+    }
+
+    .prompt-label {
+      font-size: 0.78rem;
+    }
+
+    .terminal-input {
+      font-size: 0.8rem;
+    }
+  }
+}
