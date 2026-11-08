@@ -19,7 +19,7 @@ export const APPS = {
     title: "GitHub Activity & Repositories — Pallav Shrivastava",
     icon: "/doc-icons/github.svg",
     dockTooltip: "GitHub",
-    defaultWidth: "60vw",
+    defaultWidth: "66vw",
     defaultHeight: "62vh",
     minWidth: 460,
     minHeight: 360,
@@ -30,13 +30,13 @@ export const APPS = {
   projects: {
     id: "projects",
     name: "Projects",
-    title: "Projects Explorer — Pallav Shrivastava",
+    title: "Projects Explorer",
     icon: "/doc-icons/arena.svg",
     dockTooltip: "Projects",
-    defaultWidth: "64vw",
-    defaultHeight: "66vh",
-    minWidth: 480,
-    minHeight: 360,
+    defaultWidth: "66vw",
+    defaultHeight: "62vh",
+    minWidth: 420,
+    minHeight: 320,
     showInDock: true,
     dockOrder: 3,
     bgColor: "#111827"
@@ -52,7 +52,7 @@ export const APPS = {
     minWidth: 450,
     minHeight: 400,
     showInDock: true,
-    dockOrder: 4,
+    dockOrder: 5,
     bgColor: "linear-gradient(to bottom, #ef4444, #b91c1c)"
   },
   spotify: {
@@ -66,7 +66,7 @@ export const APPS = {
     minWidth: 320,
     minHeight: 380,
     showInDock: true,
-    dockOrder: 5,
+    dockOrder: 6,
     bgColor: "linear-gradient(to bottom, #1db954, #121212)"
   },
   contact: {
@@ -80,7 +80,7 @@ export const APPS = {
     minWidth: 400,
     minHeight: 340,
     showInDock: true,
-    dockOrder: 6,
+    dockOrder: 7,
     bgColor: "linear-gradient(to bottom, #4f46e5, #312e81)"
   },
   links: {
@@ -94,7 +94,7 @@ export const APPS = {
     minWidth: 380,
     minHeight: 340,
     showInDock: true,
-    dockOrder: 7,
+    dockOrder: 8,
     bgColor: "#18181b"
   },
   skills: {
@@ -107,7 +107,8 @@ export const APPS = {
     defaultHeight: "64vh",
     minWidth: 460,
     minHeight: 360,
-    showInDock: false,
+    showInDock: true,
+    dockOrder: 4,
     bgColor: "#18181b"
   }
 };

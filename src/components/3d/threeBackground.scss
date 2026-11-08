@@ -27,7 +27,7 @@
   align-items: center;
   gap: 0.1rem;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 10; // Sits above 3D scene (z: 1) and hero (z: 2), but strictly below active windows (z: 100+)
   animation: tooltipPop 0.15s ease-out;
 
   .tooltip-title {

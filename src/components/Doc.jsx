@@ -26,6 +26,13 @@ const DOCK_ITEMS = [
     type: "app"
   },
   {
+    id: "skills",
+    title: "Technical Skills",
+    icon: "/doc-icons/skills.svg",
+    className: "skills",
+    type: "app"
+  },
+  {
     id: "resume",
     title: "Resume",
     icon: "/doc-icons/pdf.svg",

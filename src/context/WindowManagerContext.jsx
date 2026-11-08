@@ -84,25 +84,25 @@ export const WindowManagerProvider = ({ children }) => {
       return { x: 0, y: 32 };
     }
 
-    const defaultW = Math.min(840, winWidth * 0.58);
-    const defaultH = Math.min(580, (winHeight - 32 - 76) * 0.75);
+    const defaultW = Math.min(960, Math.floor(winWidth * 0.66));
+    const defaultH = Math.min(520, Math.floor((winHeight - 32 - 84) * 0.82));
 
     const step = cascadeCounter.current % 5;
     cascadeCounter.current += 1;
 
-    // Center base position between top nav (32px) and bottom dock (76px)
+    // Center base position between top nav (32px) and bottom dock (84px)
     const centerX = Math.max(30, Math.floor((winWidth - defaultW) / 2));
-    const centerY = Math.max(48, Math.floor((winHeight - 32 - 76 - defaultH) / 2) + 32);
+    const centerY = Math.max(42, Math.floor((winHeight - 32 - 84 - defaultH) / 2) + 32);
 
-    const xOffset = step * 32;
-    const yOffset = step * 26;
+    const xOffset = step * 20;
+    const yOffset = step * 16;
 
     let posX = centerX + xOffset;
     let posY = centerY + yOffset;
 
-    // Strict boundary checks: ensure window cannot open outside viewport
-    if (posX + 340 > winWidth) posX = Math.max(20, winWidth - 380);
-    if (posY + 260 > winHeight - 76) posY = Math.max(40, winHeight - 340);
+    // Strict boundary checks: ensure window bottom never extends into or below bottom dock
+    if (posX + defaultW > winWidth - 20) posX = Math.max(20, winWidth - defaultW - 20);
+    if (posY + defaultH > winHeight - 88) posY = Math.max(38, winHeight - 88 - defaultH);
 
     return { x: posX, y: posY };
   }, []);

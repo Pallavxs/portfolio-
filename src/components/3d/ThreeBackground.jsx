@@ -406,6 +406,25 @@ const ThreeBackground = () => {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
 
+        // If hovering over any UI layer (Terminal, window, dock, navbar, modal),
+        // completely suppress 3D raycasting and dismiss any 3D hover tooltip
+        const hitEl = document.elementFromPoint(e.clientX, e.clientY) || e.target;
+        const isOverUI = Boolean(
+          hitEl?.closest(
+            ".window, .react-draggable, [role='dialog'], .dock-container, .dock, .os-nav-bar, .futuristic-profile-card, .profile-card-backdrop"
+          )
+        );
+
+        if (isOverUI) {
+          setHoveredApp(null);
+          interactiveObjects.forEach((item) => {
+            item.targetScale = 1.0;
+            item.isHovered = false;
+          });
+          container.style.cursor = "default";
+          return;
+        }
+
         mouseVec.x = (e.clientX / window.innerWidth) * 2 - 1;
         mouseVec.y = -(e.clientY / window.innerHeight) * 2 + 1;
 
@@ -443,12 +462,11 @@ const ThreeBackground = () => {
       // Click to open application window (Capture phase on canvas prevents event bubbling to empty desktop)
       handleClick = (e) => {
         // Only trigger if click didn't land on UI window, nav, or dock
+        const hitEl = document.elementFromPoint(e.clientX, e.clientY) || e.target;
         if (
-          e.target.closest(".window") ||
-          e.target.closest(".dock-container") ||
-          e.target.closest(".dock") ||
-          e.target.closest(".os-nav-bar") ||
-          e.target.closest(".futuristic-profile-card")
+          hitEl?.closest(
+            ".window, .react-draggable, [role='dialog'], .dock-container, .dock, .os-nav-bar, .futuristic-profile-card, .profile-card-backdrop"
+          )
         ) {
           return;
         }
