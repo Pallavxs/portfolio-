@@ -29,21 +29,21 @@ export const projects = [
     featured: true,
     hasAppWindow: false
   },
-  {
-    id: "zena",
-    appId: "zena",
-    name: "Zena",
-    title: "Zena - Conversational AI Assistant",
-    tagline: "Context-aware conversational AI with dynamic tool execution and history management.",
-    description: "A fast, privacy-conscious conversational AI interface offering multi-turn dialog memory, markdown code rendering, custom system prompt personalization, and simulated agent reasoning for developer workflows.",
-    technologies: ["React", "TypeScript", "Express", "OpenAI SDK", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/Pallavxs/Zena",
-    liveDemo: "https://zena-ai.dev",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
-    category: "AI / LLM",
-    featured: true,
-    hasAppWindow: false
-  },
+  // {
+  //   id: "zena",
+  //   appId: "zena",
+  //   name: "Zena",
+  //   title: "Zena - Conversational AI Assistant",
+  //   tagline: "Context-aware conversational AI with dynamic tool execution and history management.",
+  //   description: "A fast, privacy-conscious conversational AI interface offering multi-turn dialog memory, markdown code rendering, custom system prompt personalization, and simulated agent reasoning for developer workflows.",
+  //   technologies: ["React", "TypeScript", "Express", "OpenAI SDK", "MongoDB", "Tailwind CSS"],
+  //   github: "https://github.com/Pallavxs/Zena",
+  //   liveDemo: "https://zena-ai.dev",
+  //   image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
+  //   category: "AI / LLM",
+  //   featured: true,
+  //   hasAppWindow: false
+  // },
   {
     id: "ai-review-system",
     appId: null,
@@ -59,5 +59,20 @@ export const projects = [
     featured: false,
     hasAppWindow: false
   },
+  {
+  id: "blog-website",
+  appId: null,
+  name: "Blog Website",
+  title: "Blog Website - Full-Stack MERN Blogging Platform",
+  tagline: "A full-stack blogging platform for creating, managing, and sharing blog content.",
+  description: "A full-stack blogging platform built with React, Node.js, Express, and MongoDB that allows users to register, sign in, create and manage blog posts, browse content by category, and share their thoughts through a modern responsive interface.",
+  technologies: ["React", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "Firebase", "Axios"],
+  github: "https://github.com/Pallavxs/Blog-website",
+  liveDemo: "https://bblog-xi.vercel.app/",
+  image: "/projects-img/B_blog.png",
+  category: "Web Application",
+  featured: false,
+  hasAppWindow: false
+},
 ];
 
